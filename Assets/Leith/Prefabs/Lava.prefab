@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4316035383187596}
   - component: {fileID: 212169879841007566}
   - component: {fileID: 50517585965559226}
+  - component: {fileID: 114566176756664616}
   - component: {fileID: 58120835794300772}
   m_Layer: 9
   m_Name: Lava
@@ -52,7 +53,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -77,6 +78,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &114566176756664616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894775682251198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980c0fff0399b594db0a4dc784423470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212169879841007566
 SpriteRenderer:
   m_ObjectHideFlags: 1

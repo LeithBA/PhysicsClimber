@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4148556159400942}
   - component: {fileID: 212464308889328482}
   - component: {fileID: 50922580475730358}
-  - component: {fileID: 114797688256577528}
-  - component: {fileID: 60350797365338762}
+  - component: {fileID: 114159816042270056}
   - component: {fileID: 233251246051837796}
+  - component: {fileID: 58379174654870766}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60350797365338762
-PolygonCollider2D:
+--- !u!58 &58379174654870766
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,22 +77,9 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
---- !u!114 &114797688256577528
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &114159816042270056
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01721226a4d9a6a4fa56573cc1803ecd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4048c5f5b88b1014691f17f9d01d427c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

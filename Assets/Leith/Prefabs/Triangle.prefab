@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4599144391412184}
   - component: {fileID: 212168309014546038}
   - component: {fileID: 50616183965878592}
+  - component: {fileID: 114847156961364356}
   - component: {fileID: 60117086138183676}
   - component: {fileID: 233355728326008112}
   m_Layer: 0
@@ -53,7 +54,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -90,6 +91,17 @@ PolygonCollider2D:
     - - {x: 0.000897944, y: 0.38772357}
       - {x: -0.47727948, y: -0.44177878}
       - {x: 0.47603497, y: -0.43908882}
+--- !u!114 &114847156961364356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725953397250200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980c0fff0399b594db0a4dc784423470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212168309014546038
 SpriteRenderer:
   m_ObjectHideFlags: 1

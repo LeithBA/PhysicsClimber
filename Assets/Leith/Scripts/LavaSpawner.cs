@@ -20,6 +20,6 @@ public class LavaSpawner : MonoBehaviour {
 
 	private void lavaInit()
 	{
-		Instantiate(lava, gameObject.transform.position, Quaternion.identity);
+		Instantiate(lava, gameObject.transform.position, Quaternion.identity, this.transform);
 	}
 }

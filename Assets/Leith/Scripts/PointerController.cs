@@ -8,15 +8,15 @@ public class PointerController : MonoBehaviour
 {
     Vector3 mousePos;
     Rigidbody2D rb2D;
-    [SerializeField] GameObject lastLink, grapple;
+    [SerializeField] GameObject grapple;
 
     GameObject nextObject;
 
     [SerializeField] GameObject[] objects;
-	[SerializeField, Range(0.01f, 2)] float coolDown = 0.5f;
+    [SerializeField, Range(0.01f, 2)] float coolDown = 0.5f;
 
     bool loaded = false;
-	float timer = 0;
+    float timer = 0;
 
     private void Start()
     {
@@ -34,15 +34,15 @@ public class PointerController : MonoBehaviour
             ObjectRelease();
         }
 
-		if (loaded == false)
-		{
-			timer += Time.deltaTime;
-			if (timer >= coolDown)
-			{
-				ObjectInit();
-				timer = 0;
-			}
-		}
+        if (loaded == false)
+        {
+            timer += Time.deltaTime;
+            if (timer >= coolDown)
+            {
+                ObjectInit();
+                timer = 0;
+            }
+        }
     }
 
     //TRANSLATES POINTER TO MOUSE POSITION
@@ -68,7 +68,7 @@ public class PointerController : MonoBehaviour
         randomPick = objects[Random.Range(0, objects.Length)];
 
         nextObject = Instantiate(randomPick, grapple.transform.position, Quaternion.identity);
-        randomPick.GetComponent<HingeJoint2D>().connectedBody = lastLink.GetComponent<Rigidbody2D>();
+        randomPick.GetComponent<HingeJoint2D>().connectedBody = grapple.GetComponent<Rigidbody2D>();
 
         loaded = true;
     }
@@ -79,7 +79,7 @@ public class PointerController : MonoBehaviour
         {
             nextObject.GetComponent<HingeJoint2D>().enabled = false;
 
-			loaded = false;
+            loaded = false;
         }
     }
 }
