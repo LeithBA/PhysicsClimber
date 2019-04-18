@@ -4,26 +4,43 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed;
-    private Rigidbody2D rigid;
-    public GameObject player;
-    private Vector2 moveVelocity;
 
-	// Use this for initialization
-	void Start ()
+    [SerializeField] float m_movementSpeed = 100f;
+    [SerializeField] float m_jumpSpeed = 10f;
+
+
+    Rigidbody2D m_myRigidBody;
+    
+    void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
+
+        m_myRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        if (m_myRigidBody == null)
+        {
+
+            Debug.Log("No RigidBody found in PhysicalMovementController");
+        }
     }
 
-    private void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        rigid.MovePosition(rigid.position + moveVelocity * Time.fixedDeltaTime);
+
+        float horizontalMovement = Input.GetAxis("Horizontal");
+        float verticalMovement = Input.GetAxis("Vertical");
+
+
+        ///creating a direction vector for the force
+        Vector2 movementForce = new Vector2();
+
+        movementForce.x = horizontalMovement * m_movementSpeed * Time.deltaTime;
+        movementForce.y = verticalMovement * m_movementSpeed * Time.deltaTime;
+
+        ///add y force when jumping
+        if (Input.GetButton("Jump")) { movementForce.y = m_jumpSpeed * Time.deltaTime; }
+
+        ///and add tp force as an impulse to the rigid body
+        m_myRigidBody.AddForce(movementForce, ForceMode2D.Impulse);
     }
 }

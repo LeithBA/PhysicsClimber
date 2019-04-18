@@ -301,7 +301,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -380,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e697d75a79d4e0f4ea10253c1654abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  player: {fileID: 844922468}
+  m_movementSpeed: 100
+  m_jumpSpeed: 100
 --- !u!1 &2045437372
 GameObject:
   m_ObjectHideFlags: 0
