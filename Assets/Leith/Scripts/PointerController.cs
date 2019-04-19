@@ -79,7 +79,7 @@ public class PointerController : MonoBehaviour
         if (nextObject != null)
         {
             nextObject.GetComponent<HingeJoint2D>().enabled = false;
-
+            nextObject.GetComponent<AutoDestruct>().nextObject = false;
             loaded = false;
         }
     }
