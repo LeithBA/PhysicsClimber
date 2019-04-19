@@ -20,9 +20,10 @@ public class PointerController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         MouseInitPos();
-        ObjectInit();
+        ObjectInit();       
 
     }
     private void Update()

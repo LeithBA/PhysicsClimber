@@ -6,7 +6,7 @@ public class LavaSpawner : MonoBehaviour {
 
 	float timer = 0;
 	[SerializeField] float lavaPeriod;
-	[SerializeField] GameObject lava;
+	[SerializeField] GameObject lava, lavaContainer;
 
 	void Update () 
 	{
@@ -20,6 +20,6 @@ public class LavaSpawner : MonoBehaviour {
 
 	private void lavaInit()
 	{
-		Instantiate(lava, gameObject.transform.position, Quaternion.identity, this.transform);
+		Instantiate(lava, gameObject.transform.position, Quaternion.identity, lavaContainer.transform);
 	}
 }
