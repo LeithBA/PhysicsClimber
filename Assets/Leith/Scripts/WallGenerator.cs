@@ -16,7 +16,6 @@ public class WallGenerator : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(nextLevelHeight + ", " + currentLevel);
         if (this.transform.position.y >= nextLevelHeight - wallHeight)
         {
 			GameObject newWall =  Instantiate(walls, new Vector3(0, nextLevelHeight, 0), Quaternion.identity, wallContainer.transform);
