@@ -9,17 +9,17 @@ public class Score : MonoBehaviour
     float maxPos;
     public Text score;
 
-    LavaVulnerability LV;
+    GameState GS;
 
     void Start()
     {
-        LV = GetComponent<LavaVulnerability>();
+        GS = GameObject.Find("GameManager").GetComponent<GameState>();
     }
     void Update()
     {
         float playerPos = gameObject.transform.position.y;
 
-        if (playerPos > maxPos && LV.dead == false)
+        if (playerPos > maxPos && GS.dead == false)
         {
             maxPos = playerPos;
         }

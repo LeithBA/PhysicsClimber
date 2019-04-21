@@ -14,6 +14,7 @@ public class PointerController : MonoBehaviour
 
     [SerializeField] GameObject[] objects;
     [SerializeField, Range(0.01f, 2)] float coolDown = 0.5f;
+    GameState GS;
 
     bool loaded = false;
     float timer = 0;
@@ -23,25 +24,29 @@ public class PointerController : MonoBehaviour
         Cursor.visible = false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         MouseInitPos();
-        ObjectInit();       
+        ObjectInit();
+        GS = GameObject.Find("GameManager").GetComponent<GameState>();
 
     }
     private void Update()
     {
-        PointerUpdatePos();
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (GS.dead == false)
         {
-            ObjectRelease();
-        }
+            PointerUpdatePos();
 
-        if (loaded == false)
-        {
-            timer += Time.deltaTime;
-            if (timer >= coolDown)
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                ObjectInit();
-                timer = 0;
+                ObjectRelease();
+            }
+
+            if (loaded == false)
+            {
+                timer += Time.deltaTime;
+                if (timer >= coolDown)
+                {
+                    ObjectInit();
+                    timer = 0;
+                }
             }
         }
     }
