@@ -32,8 +32,8 @@ public class LavaSpawner : MonoBehaviour
     private void lavaInit()
     {
 		transform.position = new Vector3(initialPos.x + Random.Range(-0.5f, 0.5f), 
-										 initialPos.y, 
-										 initialPos.z);
+										 transform.position.y, 
+										 transform.position.z);
 
         Instantiate(lava, gameObject.transform.position, Quaternion.identity, lavaContainer.transform);
     }
