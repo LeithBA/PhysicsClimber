@@ -7,14 +7,14 @@ public class CircleController : MonoBehaviour
 
     Rigidbody2D rb2D;
     Collider2D col;
-	float colRadius;
-    [SerializeField] float torqueAmount, jumpForceAmount;
+    float colRadius;
+    [SerializeField] float torqueAmount, jumpVerticalForceAmount, jumpHorizontalForceAmount;
 
     void Start()
     {
         rb2D = this.GetComponent<Rigidbody2D>();
         col = this.GetComponent<CircleCollider2D>();
-		colRadius = this.GetComponent<CircleCollider2D>().radius;
+        colRadius = this.GetComponent<CircleCollider2D>().radius;
     }
 
     void Update()
@@ -34,18 +34,23 @@ public class CircleController : MonoBehaviour
 
     private void VerticalMovementListner()
     {
-		Vector3 playerFeet = col.bounds.min + new Vector3(colRadius, -0.01f, 0);
-        
-		bool isGrounded = Physics2D.Raycast(playerFeet, 
-										    Vector3.down, 
-										    0.1f);
+        Vector3 playerFeet = col.bounds.min + new Vector3(colRadius, -0.01f, 0);
 
-		Debug.DrawRay(playerFeet, Vector3.down * 0.1f, Color.yellow);
-		Debug.Log(isGrounded);
+        bool isGrounded = Physics2D.Raycast(playerFeet,
+                                            Vector3.down,
+                                            0.2f);
+
+        Debug.DrawRay(playerFeet, Vector3.down * 0.2f, Color.yellow);
 
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
-            rb2D.AddForce(Vector2.up * jumpForceAmount, ForceMode2D.Impulse);
+            rb2D.AddForce(Vector2.up * jumpVerticalForceAmount, ForceMode2D.Impulse);
+
+            if (Input.GetAxis("Horizontal") < 0)
+                rb2D.AddForce(Vector2.left * jumpHorizontalForceAmount, ForceMode2D.Impulse);
+
+            else if (Input.GetAxis("Horizontal") > 0)
+                rb2D.AddForce(Vector2.right * jumpHorizontalForceAmount, ForceMode2D.Impulse);
         }
     }
 }
