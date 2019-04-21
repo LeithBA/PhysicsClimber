@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,11 +42,16 @@ public class TorqueMove : MonoBehaviour
 
         movementForce.x = horizontalMovement * m_movementSpeed * Time.deltaTime;
         movementForce.y = verticalMovement * m_movementSpeed * Time.deltaTime;
-        
-        if (Input.GetButton("Jump")) { movementForce.y = m_jumpSpeed * Time.deltaTime; }
 
         //Movement Force is not a float -> Cannot convert? Error gone, why dunno xD
         playerone.AddTorque(movementForce.x, ForceMode2D.Force);
         playerone.AddTorque(movementForce.y, ForceMode2D.Force);
+
+        if (Input.GetButton("Jump"))
+        {
+            playerone.AddForce(Vector2.up, ForceMode2D.Impulse);
+
+           // movementForce.y = m_jumpSpeed * Time.deltaTime;
+        }
     }
 }
