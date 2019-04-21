@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c3874662e889cb34f828cf14d4d8bc02
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Azo Sans
+  fontNames:
+  - Azo Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9e7afb173c6b08549b38018e1785ede7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
