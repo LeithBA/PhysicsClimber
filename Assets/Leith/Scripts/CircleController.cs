@@ -10,17 +10,23 @@ public class CircleController : MonoBehaviour
     float colRadius;
     [SerializeField] float torqueAmount, jumpVerticalForceAmount, jumpHorizontalForceAmount;
 
+    GameState GS;
+
     void Start()
     {
         rb2D = this.GetComponent<Rigidbody2D>();
         col = this.GetComponent<CircleCollider2D>();
         colRadius = this.GetComponent<CircleCollider2D>().radius;
+        GS = GameObject.Find("GameManager").GetComponent<GameState>();
     }
 
     void Update()
     {
-        HorizontalMovementListener();
-        VerticalMovementListner();
+        if (GS.dead == false)
+        {
+            HorizontalMovementListener();
+            VerticalMovementListner();
+        }
     }
 
     private void HorizontalMovementListener()
