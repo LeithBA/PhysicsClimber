@@ -2,46 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class TorqueMove : MonoBehaviour
 {
-    
+    public float speed = 50f;
+   
     [SerializeField] float m_movementSpeed = 100f;
     [SerializeField] float m_jumpSpeed = 10f;
 
+    Rigidbody2D playerone;
 
 
-    Rigidbody2D m_myRigidBody;
-    
-    void Start()
+    // Use this for initialization
+    void Start ()
     {
+        playerone = gameObject.GetComponent<Rigidbody2D>();
 
-        m_myRigidBody = gameObject.GetComponent<Rigidbody2D>();
-
-        if (m_myRigidBody == null)
+        if (playerone == null)
         {
 
             Debug.Log("No RigidBody found in PhysicalMovementController");
         }
     }
 
-    // Update is called once per frame
+    // Because Add Torque uses Physics -> Fixed Update instead update
+    /*void FixedUpdate ()
+    {
+        //AddTorque is used like Rigidbody.AddTorque(vector,ForceMode)
+
+        playerone.AddTorque(speed, ForceMode2D.Force);
+
+    }*/
+
     void Update()
     {
-
         float horizontalMovement = Input.GetAxis("Horizontal");
         float verticalMovement = Input.GetAxis("Vertical");
 
 
-        ///creating a direction vector for the force in 2D
         Vector2 movementForce = new Vector2();
 
         movementForce.x = horizontalMovement * m_movementSpeed * Time.deltaTime;
         movementForce.y = verticalMovement * m_movementSpeed * Time.deltaTime;
-
-        ///add y force when jumping
+        
         if (Input.GetButton("Jump")) { movementForce.y = m_jumpSpeed * Time.deltaTime; }
 
-        ///and add tp force as an impulse to the rigid body
-        m_myRigidBody.AddForce(movementForce, ForceMode2D.Impulse);
+        //Movement Force is not a float -> Cannot convert
+        playerone.AddTorque(movementForce, ForceMode2D.Force);
     }
 }
