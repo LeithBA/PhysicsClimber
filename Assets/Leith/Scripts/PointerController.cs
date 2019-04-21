@@ -28,6 +28,7 @@ public class PointerController : MonoBehaviour
         MouseInitPos();
         GS = GameObject.Find("GameManager").GetComponent<GameState>();
         IMC = GameObject.Find("GameManager").GetComponent<InvertMatCol>();
+        
         for (int i = 0; i < this.transform.childCount - 1; i++)
         {
             if (IMC.dark == true)

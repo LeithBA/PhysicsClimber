@@ -14,6 +14,7 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
+
         wallHeight = level.transform.GetChild(0).localScale.y + 1;
         nextLevelHeight = wallHeight * currentLevel;
         IMC = GameObject.Find("GameManager").GetComponent<InvertMatCol>();
