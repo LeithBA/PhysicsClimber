@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    
     [SerializeField] float m_movementSpeed = 100f;
     [SerializeField] float m_jumpSpeed = 10f;
 
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
         float verticalMovement = Input.GetAxis("Vertical");
 
 
-        ///creating a direction vector for the force
+        ///creating a direction vector for the force in 2D
         Vector2 movementForce = new Vector2();
 
         movementForce.x = horizontalMovement * m_movementSpeed * Time.deltaTime;
