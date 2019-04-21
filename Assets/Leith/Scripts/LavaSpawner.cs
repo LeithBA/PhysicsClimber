@@ -2,24 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaSpawner : MonoBehaviour {
+public class LavaSpawner : MonoBehaviour
+{
 
-	float timer = 0;
-	[SerializeField] float lavaPeriod;
-	[SerializeField] GameObject lava, lavaContainer;
+    float timer = 0;
+    [SerializeField] float initialTimer, lavaPeriod;
+    [SerializeField] GameObject lava, lavaContainer;
 
-	void Update () 
-	{
-		timer += Time.deltaTime;
-		if (timer >= lavaPeriod)
-		{
-			timer = 0;
-			lavaInit();
-		}
-	}
+	Vector3 initialPos;
 
-	private void lavaInit()
-	{
-		Instantiate(lava, gameObject.transform.position, Quaternion.identity, lavaContainer.transform);
-	}
+    void Start()
+    {
+		initialPos = transform.position;
+    }
+
+    void Update()
+    {
+        if (Time.time > initialTimer)
+        {
+            timer += Time.deltaTime;
+            if (timer >= lavaPeriod)
+            {
+                timer = 0;
+                lavaInit();
+            }
+        }
+    }
+
+    private void lavaInit()
+    {
+		transform.position = new Vector3(initialPos.x + Random.Range(-0.5f, 0.5f), 
+										 initialPos.y, 
+										 initialPos.z);
+
+        Instantiate(lava, gameObject.transform.position, Quaternion.identity, lavaContainer.transform);
+    }
 }
