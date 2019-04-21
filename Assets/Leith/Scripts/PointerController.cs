@@ -7,7 +7,7 @@ using UnityEngine;
 public class PointerController : MonoBehaviour
 {
     Vector3 mousePos;
-    Rigidbody2D rb2D;
+    Rigidbody2D rb2D, grappleRB2D;
     [SerializeField] GameObject grapple;
 
     GameObject nextObject;
@@ -23,8 +23,8 @@ public class PointerController : MonoBehaviour
     {
         Cursor.visible = false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        grappleRB2D = grapple.GetComponent<Rigidbody2D>();
         MouseInitPos();
-        ObjectInit();
         GS = GameObject.Find("GameManager").GetComponent<GameState>();
 
     }
@@ -49,6 +49,8 @@ public class PointerController : MonoBehaviour
                 }
             }
         }
+        else
+            Cursor.visible = true;
     }
 
     //TRANSLATES POINTER TO MOUSE POSITION
@@ -73,7 +75,9 @@ public class PointerController : MonoBehaviour
         GameObject randomPick;
         randomPick = objects[Random.Range(0, objects.Length)];
         nextObject = Instantiate(randomPick, grapple.transform.position, Quaternion.identity);
-        randomPick.GetComponent<HingeJoint2D>().connectedBody = grapple.GetComponent<Rigidbody2D>();
+        
+        HingeJoint2D HJ2D = randomPick.GetComponent<HingeJoint2D>();
+        HJ2D.connectedBody = grappleRB2D;
         loaded = true;
     }
 
