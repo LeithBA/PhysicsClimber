@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     /*---------------------------MenueFunctions------------------------------*/
     public void NewGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void CreditsPlay()

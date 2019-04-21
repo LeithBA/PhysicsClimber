@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000053406, y: 680}
+  m_AnchoredPosition: {x: 0, y: 670}
   m_SizeDelta: {x: 1075.4, y: 141.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61197704
@@ -282,14 +282,14 @@ RectTransform:
   m_GameObject: {fileID: 162029898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.71999997, y: 0.71999997, z: 0.71999997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1143683696}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53, y: -411}
+  m_AnchoredPosition: {x: 53, y: 330}
   m_SizeDelta: {x: 1107.4, y: 285.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162029900
@@ -360,7 +360,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1503348571}
         m_MethodName: GoingBack
         m_Mode: 1
         m_Arguments:
@@ -915,8 +915,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "This prototype was created at  \n      \nat the University of Applied Sciences
-    Europe.\n\nSupervised by: Prof. Csongor Baranyai\n\"Game a Week\"  (SummerSemester
-    2019)\n\nCopyright (c) 2019\n created by:\r\n\nLeith Ben Abdessalem \n&\nMehtap
+    Europe.\n\n\nSupervised by: Prof. Csongor Baranyai\n\"Game a Week\"  (SummerSemester
+    2019)\n\nCopyright (c) 2019\n created by:\r\nLeith Ben Abdessalem \n&\nMehtap
     Kurucay "
 --- !u!222 &1447503195
 CanvasRenderer:
