@@ -67,10 +67,8 @@ public class PointerController : MonoBehaviour
     {
         GameObject randomPick;
         randomPick = objects[Random.Range(0, objects.Length)];
-
         nextObject = Instantiate(randomPick, grapple.transform.position, Quaternion.identity);
         randomPick.GetComponent<HingeJoint2D>().connectedBody = grapple.GetComponent<Rigidbody2D>();
-
         loaded = true;
     }
 

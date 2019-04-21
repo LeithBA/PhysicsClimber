@@ -211,7 +211,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01721226a4d9a6a4fa56573cc1803ecd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -247,8 +247,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173352818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.787, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 4
@@ -267,7 +267,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.18990365}
-  m_ConnectedAnchor: {x: 0, y: -0.110096335}
+  m_ConnectedAnchor: {x: 0, y: -0.110096455}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -287,7 +287,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -465,8 +465,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370448461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.637, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 3
@@ -485,7 +485,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.18990365}
-  m_ConnectedAnchor: {x: 0, y: -0.110096455}
+  m_ConnectedAnchor: {x: 0, y: -0.110096335}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -505,7 +505,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -573,7 +573,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -620,7 +620,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player01: {fileID: 732870107}
   trackSpeed: 0.05
-  trackSlack: 1.2
+  trackSlack: 1
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,8 +693,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9652e3795c31c4199bdbaa0863d01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walls: {fileID: 1186016201253418, guid: a2783b4f94e9c40498a10ba34efb9ddf, type: 2}
-  wallContainer: {fileID: 722271733}
+  level: {fileID: 1229111474901492, guid: 94ab661dda7b82c498484abb177881c3, type: 2}
+  levelsContainer: {fileID: 722271733}
+  objects:
+  - {fileID: 1479530614282340, guid: d723db3b8182277478aae5edbe5d9c84, type: 2}
+  - {fileID: 1585735300955896, guid: 68701e276950dc644a8735eece5433ce, type: 2}
+  - {fileID: 1585735300955896, guid: 0da352f3493d82c46b0c059aec4ede6c, type: 2}
+  - {fileID: 1479530614282340, guid: 8ee8fca4f3a71154faed1978736b1541, type: 2}
+  - {fileID: 1725953397250200, guid: cf4566c27b0b5634199a42d354b6967a, type: 2}
 --- !u!1 &662113448
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +799,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01721226a4d9a6a4fa56573cc1803ecd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -812,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722271734}
   m_Layer: 0
-  m_Name: WallContainer
+  m_Name: LevelsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +851,7 @@ GameObject:
   - component: {fileID: 732870111}
   - component: {fileID: 732870112}
   m_Layer: 0
-  m_Name: TempPlayer
+  m_Name: CirclePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -886,12 +892,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a09e1db2c71cdd4381ab73e1b3223a2, type: 3}
-  m_Color: {r: 0.76652527, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b6a179f41c7b2184493db7e6e15c4a1d, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.85158634, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -904,7 +910,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 732870107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalPosition: {x: 0, y: -3.215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -918,7 +924,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 732870107}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f851b4cd243c08c4aa9f68b77275a609, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -936,11 +942,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 30
   m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f851b4cd243c08c4aa9f68b77275a609, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -956,8 +962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6f41b47d34f62459c08a4b825dbc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torqueAmount: 15
-  jumpForceAmount: 15
+  torqueAmount: 75
+  jumpVerticalForceAmount: 75
+  jumpHorizontalForceAmount: 5
 --- !u!1 &817215255
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +989,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 817215255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.337, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -2.405, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 7
@@ -1001,8 +1008,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.0019031167, y: 0.4163766}
-  m_ConnectedAnchor: {x: 0.0019031167, y: -0.08362341}
+  m_Anchor: {x: 0, y: 0.1}
+  m_ConnectedAnchor: {x: 0, y: -0.1049999}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1022,7 +1029,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -1044,7 +1051,7 @@ GameObject:
   - component: {fileID: 863996297}
   - component: {fileID: 863996296}
   m_Layer: 0
-  m_Name: Pointer
+  m_Name: PointerPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,12 +1107,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.07971382, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b6a179f41c7b2184493db7e6e15c4a1d, type: 3}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1119,7 +1126,7 @@ Transform:
   m_GameObject: {fileID: 863996292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1697307545}
   - {fileID: 1388393479}
@@ -1211,7 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2c69d85519c1542a750dee2e90b7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPeriod: 1
+  lavaPeriod: 2
   lava: {fileID: 1894775682251198, guid: 945dcc0573272ad48ab9684842e4fbfd, type: 2}
   lavaContainer: {fileID: 1382547198}
 --- !u!1 &1082541304
@@ -1361,8 +1368,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388393478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.337, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 1
@@ -1401,7 +1408,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -1469,7 +1476,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1547,7 +1554,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.2}
-  m_ConnectedAnchor: {x: 0, y: -0.08700001}
+  m_ConnectedAnchor: {x: 0, y: -0.20000005}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1567,7 +1574,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -1635,7 +1642,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1654,8 +1661,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1697307540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.187, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 0
@@ -1687,7 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2c69d85519c1542a750dee2e90b7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPeriod: 1
+  lavaPeriod: 2
   lava: {fileID: 1894775682251198, guid: 945dcc0573272ad48ab9684842e4fbfd, type: 2}
   lavaContainer: {fileID: 1382547198}
 --- !u!4 &1736788931
@@ -1830,7 +1837,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01721226a4d9a6a4fa56573cc1803ecd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1866,8 +1873,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2061656381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.93700004, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 5
@@ -1886,7 +1893,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.18990365}
-  m_ConnectedAnchor: {x: 0, y: -0.110096455}
+  m_ConnectedAnchor: {x: 0, y: -0.110096335}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1906,7 +1913,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -1974,7 +1981,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2012,8 +2019,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079342079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.087, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -2.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 6
@@ -2032,7 +2039,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.18990365}
-  m_ConnectedAnchor: {x: 0, y: -0.110096335}
+  m_ConnectedAnchor: {x: 0, y: -0.110096455}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2052,7 +2059,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -2120,7 +2127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2162,7 +2169,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 20
   m_GravityScale: 1
@@ -2253,7 +2260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87c3c7e1f9808d7408cc79bc702157c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2272,8 +2279,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108870066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.48700002, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863996295}
   m_RootOrder: 2
