@@ -18,6 +18,7 @@ public class PointerController : MonoBehaviour
 
     bool loaded = false;
     float timer = 0;
+    InvertMatCol IMC;
 
     private void Start()
     {
@@ -26,8 +27,21 @@ public class PointerController : MonoBehaviour
         grappleRB2D = grapple.GetComponent<Rigidbody2D>();
         MouseInitPos();
         GS = GameObject.Find("GameManager").GetComponent<GameState>();
+        IMC = GameObject.Find("GameManager").GetComponent<InvertMatCol>();
+        for (int i = 0; i < this.transform.childCount - 1; i++)
+        {
+            if (IMC.dark == true)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = IMC.objDark;
+            }
 
+            if (IMC.dark == false)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = IMC.objLight;
+            }
+        }
     }
+
     private void Update()
     {
         if (GS.dead == false)
@@ -75,7 +89,12 @@ public class PointerController : MonoBehaviour
         GameObject randomPick;
         randomPick = objects[Random.Range(0, objects.Length)];
         nextObject = Instantiate(randomPick, grapple.transform.position, Quaternion.identity);
-        
+
+        if (IMC.dark == true)
+            nextObject.GetComponent<SpriteRenderer>().color = IMC.objDark;
+        if (IMC.dark == false)
+            nextObject.GetComponent<SpriteRenderer>().color = IMC.objLight;
+
         HingeJoint2D HJ2D = randomPick.GetComponent<HingeJoint2D>();
         HJ2D.connectedBody = grappleRB2D;
         loaded = true;
