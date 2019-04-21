@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TorqueMove : MonoBehaviour
 {
-    public float speed = 50f;
-   
+    public float torquespeed = 50f;
     [SerializeField] float m_movementSpeed = 100f;
     [SerializeField] float m_jumpSpeed = 10f;
 
@@ -29,7 +28,7 @@ public class TorqueMove : MonoBehaviour
     {
         //AddTorque is used like Rigidbody.AddTorque(vector,ForceMode)
 
-        playerone.AddTorque(speed, ForceMode2D.Force);
+        playerone.AddTorque(torquespeed, ForceMode2D.Force);
 
     }*/
 
@@ -46,7 +45,8 @@ public class TorqueMove : MonoBehaviour
         
         if (Input.GetButton("Jump")) { movementForce.y = m_jumpSpeed * Time.deltaTime; }
 
-        //Movement Force is not a float -> Cannot convert
-        playerone.AddTorque(movementForce, ForceMode2D.Force);
+        //Movement Force is not a float -> Cannot convert? Error gone, why dunno xD
+        playerone.AddTorque(movementForce.x, ForceMode2D.Force);
+        playerone.AddTorque(movementForce.y, ForceMode2D.Force);
     }
 }
