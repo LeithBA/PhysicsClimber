@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +7,15 @@ public class TorqueMove : MonoBehaviour
     public float torquespeed = 50f;
     [SerializeField] float m_movementSpeed = 100f;
     [SerializeField] float m_jumpSpeed = 10f;
+    Collider2D col;
+    float colRadius;
+    [SerializeField] float torqueAmount, jumpForceAmount;
 
     Rigidbody2D playerone;
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         playerone = gameObject.GetComponent<Rigidbody2D>();
 
@@ -43,15 +46,34 @@ public class TorqueMove : MonoBehaviour
         movementForce.x = horizontalMovement * m_movementSpeed * Time.deltaTime;
         movementForce.y = verticalMovement * m_movementSpeed * Time.deltaTime;
 
-        //Movement Force is not a float -> Cannot convert? Error gone, why dunno xD
+
         playerone.AddTorque(movementForce.x, ForceMode2D.Force);
         playerone.AddTorque(movementForce.y, ForceMode2D.Force);
 
-        if (Input.GetButton("Jump"))
-        {
-            playerone.AddForce(Vector2.up, ForceMode2D.Impulse);
+        Jump();
+    }
 
-           // movementForce.y = m_jumpSpeed * Time.deltaTime;
+    public void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+            playerone.AddForce(Vector2.up, ForceMode2D.Impulse);
+    }
+
+    private void VerticalMovementListner()
+    {
+        Vector3 playerFeet = col.bounds.min + new Vector3(colRadius, -0.01f, 0);
+
+        bool isGrounded = Physics2D.Raycast(playerFeet,
+                                            Vector3.down,
+                                            0.1f);
+
+        Debug.DrawRay(playerFeet, Vector3.down * 0.1f, Color.yellow);
+        Debug.Log(isGrounded);
+
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            playerone.AddForce(Vector2.up * jumpForceAmount, ForceMode2D.Impulse);
         }
     }
 }
+
