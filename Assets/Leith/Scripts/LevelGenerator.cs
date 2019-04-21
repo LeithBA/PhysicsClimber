@@ -28,6 +28,9 @@ public class LevelGenerator : MonoBehaviour
                                                Random.Range(-4f, 4f), 0),
                                                Quaternion.identity,
                                                newWall.transform);
+            
+            float randomScale = Random.Range(1.0f, 3.0f);
+            newObject.transform.localScale = new Vector3(randomScale, randomScale, 1);
 
             newObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             newObject.GetComponent<HingeJoint2D>().connectedBody = null;

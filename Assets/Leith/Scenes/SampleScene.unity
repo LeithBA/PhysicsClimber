@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 732870108}
   - component: {fileID: 732870110}
   - component: {fileID: 732870111}
+  - component: {fileID: 732870113}
   - component: {fileID: 732870112}
   m_Layer: 0
   m_Name: CirclePlayer
@@ -893,7 +894,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b6a179f41c7b2184493db7e6e15c4a1d, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.85158634, a: 1}
+  m_Color: {r: 0.5882353, g: 1, b: 0.38431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -965,6 +966,17 @@ MonoBehaviour:
   torqueAmount: 75
   jumpVerticalForceAmount: 75
   jumpHorizontalForceAmount: 5
+--- !u!114 &732870113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732870107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c4b72f0c5eadb489b5b90c6d43b119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &817215255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1120,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b6a179f41c7b2184493db7e6e15c4a1d, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.18244925, g: 0.24017616, b: 0.9433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1218,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2c69d85519c1542a750dee2e90b7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialTimer: 5
   lavaPeriod: 2
   lava: {fileID: 1894775682251198, guid: 945dcc0573272ad48ab9684842e4fbfd, type: 2}
   lavaContainer: {fileID: 1382547198}
@@ -1694,6 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2c69d85519c1542a750dee2e90b7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialTimer: 6
   lavaPeriod: 2
   lava: {fileID: 1894775682251198, guid: 945dcc0573272ad48ab9684842e4fbfd, type: 2}
   lavaContainer: {fileID: 1382547198}
