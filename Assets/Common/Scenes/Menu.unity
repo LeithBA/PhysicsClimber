@@ -188,8 +188,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1165442823}
-        m_MethodName: Invert
+      - m_Target: {fileID: 1165442824}
+        m_MethodName: InvertStuff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -977,6 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1165442822}
   - component: {fileID: 1165442823}
+  - component: {fileID: 1165442824}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1020,6 +1021,36 @@ MonoBehaviour:
   - {fileID: 536898701}
   - {fileID: 93601511}
   - {fileID: 2045861316}
+--- !u!114 &1165442824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165442821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88124bf2d387370499383bd4cb9a1382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dark: 1
+  envDark:
+    serializedVersion: 2
+    rgba: 0
+  envLight:
+    serializedVersion: 2
+    rgba: 16777215
+  objDark:
+    serializedVersion: 2
+    rgba: 0
+  objLight:
+    serializedVersion: 2
+    rgba: 16777215
+  bgDark:
+    serializedVersion: 2
+    rgba: 0
+  bgLight:
+    serializedVersion: 2
+    rgba: 16777215
 --- !u!1 &1313530909
 GameObject:
   m_ObjectHideFlags: 0
