@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour
     public Button newGameButton;
     public Button creditsButton;
     public Button quitButton;
-
-    public Button invert;
+    public Button invertButton;
+    public Button muteButton;
 
     //These are for Loading other Scenes
     public string newGameSceneName;
@@ -34,7 +34,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        GS.SetState(GS.inGame);
+        GS.inMenu = false;
+        GS.inGame = true;
         SceneManager.LoadScene("GameScene");
     }
 

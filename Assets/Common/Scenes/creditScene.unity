@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 670}
+  m_AnchoredPosition: {x: 0, y: 658}
   m_SizeDelta: {x: 1075.4, y: 141.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61197704
@@ -289,7 +289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53, y: 330}
+  m_AnchoredPosition: {x: 53, y: 232}
   m_SizeDelta: {x: 1107.4, y: 285.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162029900
@@ -914,10 +914,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "This prototype was created at  \n      \nat the University of Applied Sciences
-    Europe.\n\n\nSupervised by: Prof. Csongor Baranyai\n\"Game a Week\"  (SummerSemester
-    2019)\n\nCopyright (c) 2019\n created by:\r\nLeith Ben Abdessalem \n&\nMehtap
-    Kurucay "
+  m_Text: "This prototype was created at  \n\n      \nat the University of Applied
+    Sciences Europe.\n\n\n\nSupervised by: Prof. Csongor Baranyai\n\"Game a Week\"
+    \ (SummerSemester 2019)\n\nCopyright (c) 2019\n created by:\r\nLeith Ben Abdessalem
+    \n&\nMehtap Kurucay "
 --- !u!222 &1447503195
 CanvasRenderer:
   m_ObjectHideFlags: 0

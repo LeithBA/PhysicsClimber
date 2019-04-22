@@ -6,18 +6,20 @@ public class GameState : MonoBehaviour
 {
     void Awake()
     {
+
         DontDestroyOnLoad(transform.gameObject);
 
-		SetState(inMenu);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
     }
-    [HideInInspector] public bool inMenu, inGame, dead;
 
-	public void SetState(bool state)
-	{
-		inMenu = false;
-		inGame = false;
-		dead = false;
 
-		state = true;
-	}
+    public bool inMenu, inGame, dead;
+
+    private void Start()
+    {
+        inMenu = true;
+    }
 }
