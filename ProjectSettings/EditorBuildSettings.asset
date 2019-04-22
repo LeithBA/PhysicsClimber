@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Mehtap/Scenes/Menu.unity
+    path: Assets/Common/Scenes/Menu.unity
     guid: b1f9e9282724a4a44bda60cb5e713604
   - enabled: 1
-    path: Assets/Mehtap/Scenes/creditScene.unity
+    path: Assets/Common/Scenes/creditScene.unity
     guid: 433ec94a9f26f3741a76352c53980374
   - enabled: 1
     path: Assets/Common/Scenes/GameScene.unity
     guid: 787c6d4da46eac44fb475e82735fe3c6
+  - enabled: 1
+    path: Assets/Common/Scenes/Instructions.unity
+    guid: d9075eec1a608a249bf4f9fb7c4b5e58
   m_configObjects: {}

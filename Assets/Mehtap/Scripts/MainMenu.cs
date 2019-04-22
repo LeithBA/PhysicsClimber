@@ -43,6 +43,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("creditScene");
     }
 
+    public void Instructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
+
     public void BackMenu()
     {
         SceneManager.LoadScene("Menu");
